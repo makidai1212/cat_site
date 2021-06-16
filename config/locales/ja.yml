@@ -1,0 +1,5 @@
+ja:
+ activerecord:
+  attributes:
+   good:
+     content: '投稿'
