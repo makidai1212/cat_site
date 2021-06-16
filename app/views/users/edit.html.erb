@@ -1,5 +1,5 @@
-<% provide(:title, "プロフィール編集ページ") %>
-<h1>プロフィールの編集</h1>
+<% provide(:title, "マイプロフィールの編集") %>
+<h1>マイプロフィールの編集</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -18,12 +18,12 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Save changes", class: "btn btn-primary" %>
+      <%= f.submit "この内容に変更する", class: "btn btn-primary" %>
     <% end %>
 
     <div class="gravatar_edit">
       <%= gravatar_for @user %>
-      <a href="https://gravatar.com/emails" target="_blank">change</a>
+      <a href="https://gravatar.com/emails" target="_blank">マイ画像を変更する</a>
     </div>
   </div>
 </div>
