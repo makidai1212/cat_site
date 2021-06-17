@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       if user.activated?
       log_in(user)
+      # 三項演算子「remember(user) : forget(user)」が使われてる
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_back_or user
       else
