@@ -92,6 +92,8 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
 
+  mount_uploader :image, ImageUploader
+
   private
    def create_activation_digest
     self.activation_token = User.new_token

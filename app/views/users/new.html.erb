@@ -17,6 +17,9 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control'  %>
 
+      <%= f.label :image, "プロフィール画面" %>
+      <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png', class: "image-select-btn" %>   
+
       <%= f.submit "この内容で登録する", class: "btn btn-primary" %>
     <% end %>
   </div>
