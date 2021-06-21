@@ -10,7 +10,8 @@ class User < ApplicationRecord
                                         source: :followed
   has_many :followers,                through: :passive_relationships,
                                         source: :follower
-
+  has_many :likes, dependent: :destroy
+  
   attr_accessor :remember_token, :activation_token, :reset_token
   before_create :create_activation_digest
   before_save :downcase_email
@@ -91,6 +92,8 @@ class User < ApplicationRecord
   def following?(other_user)
     following.include?(other_user)
   end
+
+  
 
   mount_uploader :image, ImageUploader
 
