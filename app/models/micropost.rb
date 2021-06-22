@@ -2,6 +2,7 @@ class Micropost < ApplicationRecord
   belongs_to       :user
   has_one_attached :image
   has_many :likes, dependent: :destroy
+  has_many :liked_users, through: :likes, source: :user
   has_many :iine_users, through: :likes, source: :user
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
@@ -21,7 +22,7 @@ class Micropost < ApplicationRecord
     likes.create(user_id: user.id)
   end
 
-  # マイクロポストのいいねを解除する（ネーミングセンスに対するクレームは受け付けません）
+  # マイクロポストのいいねを解除する
   def uniine(user)
     likes.find_by(user_id: user.id).destroy
   end

@@ -62,8 +62,7 @@ class UsersController < ApplicationController
   end
 
   def likes
-    @likes = Like.where(user_id: current_user)
-    @microposts = @likes.paginate(page: params[:page])
+    @likes = Like.where(user_id: current_user).page(params[:page])
   end
 
   private
