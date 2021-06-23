@@ -12,12 +12,16 @@ class UsersController < ApplicationController
     @microposts = @user.microposts.paginate(page: params[:page])
   end
 
+  # アカウント有効化機能解除のため一部コメントアウトして修正。6/23
   def create
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:info] = "メール送信しました。メールからアカウント有効化してください"
-      redirect_to root_url
+      # flash[:info] = "メール送信しました。メールからアカウント有効化してください"
+      # redirect_to root_url
+      
+      # アカウント有効化機能を復活させる時はこちらをコメントアウトすること
+      redirect_to @user
     else
       render "new"
     end
