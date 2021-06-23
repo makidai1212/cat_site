@@ -11,7 +11,6 @@ class User < ApplicationRecord
   has_many :followers,                through: :passive_relationships,
                                         source: :follower
   has_many :likes, dependent: :destroy
-  has_many :liked_posts, through: :likes, source: :micropost
   
   attr_accessor :remember_token, :activation_token, :reset_token
   before_create :create_activation_digest
