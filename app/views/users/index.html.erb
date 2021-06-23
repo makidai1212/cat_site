@@ -1,9 +1,13 @@
 <% provide(:title, '登録している人間 or ねこ') %>
-<h1>登録している人間 or ねこ</h1>
-<%= will_paginate %>
-
-<ul class="users">
-  <%= render @users %>
-</ul>
-
-<%= will_paginate %>
+  <div class="jumbotron_4">
+    <div class="bg-mask">
+      <div class="container-fluid">
+        <h1>登録している人間 or ねこ</h1>
+        <%= will_paginate %>
+        <ul class="users">
+          <%= render @users %>
+        </ul>
+        <%= will_paginate %>
+      </div>
+    </div>
+  </div>

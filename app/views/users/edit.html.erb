@@ -2,31 +2,36 @@
 <h1>マイプロフィールの編集</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_with(model: @user, local: true) do |f| %>
-      <%= render 'shared/error_messages', object: f.object%>
+  <div class="jumbotron_3">
+    <div class="bg-mask">
+      <div class="container-fluid">
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_with(model: @user, local: true) do |f| %>
+          <%= render 'shared/error_messages', object: f.object%>
 
-      <%= f.label :name, "名前" %>
-      <%= f.text_field :name, class: 'form-control' %>
+          <%= f.label :name, "名前" %>
+          <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :email, "メールアドレス" %>
-      <%= f.email_field :email, class: 'form-control' %>
+          <%= f.label :email, "メールアドレス" %>
+          <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :password , "パスワード"%>
-      <%= f.password_field :password, class: 'form-control' %>
+          <%= f.label :password , "パスワード"%>
+          <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "パスワードの確認" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+          <%= f.label :password_confirmation, "パスワードの確認" %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.label :image, "現在のプロフィール画像を変更" %>
-      <% if @user.image? %>
-        <%= image_tag @user.image.thumb.url , class: "user-icon" %>
-      <% else %>
-        <%= image_tag "default.jpg", alt: "user-icon", size: "80", class: "user-icon" %>
-      <% end %>
-      <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png', class: "image-select-btn" %>   
-      <%= f.submit "この内容に変更する", class: "btn btn-primary" %>
-    <% end %>
+          <%= f.label :image, "現在のプロフィール画像を変更" %>
+          <% if @user.image? %>
+            <%= image_tag @user.image.thumb.url , class: "user-icon" %>
+          <% else %>
+            <%= image_tag "default.jpg", alt: "user-icon", size: "80", class: "user-icon" %>
+          <% end %>
+          <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png', class: "image-select-btn" %>   
+          <%= f.submit "この内容に変更する", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      </div>  
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 /* mixins, variables, etc. */
 
@@ -37,22 +37,25 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: #777;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 p {
@@ -65,12 +68,14 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  margin-left: 20px;
+  font-size: 2em;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 5px;
   font-weight: bold;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 #logo:hover {
@@ -79,12 +84,38 @@ p {
 }
 
 /* home */
-.top-wrapper{
-  background-image: image-url('4629742_m.jpg');
+.jumbotron {
+  position: relative;
+  height: 70vh;
+  background: url(4629742_m.jpg) center center;
   background-size: cover;
-  text-align: center;
-  height: 500px;
-}
+  }
+
+.jumbotron_2 {
+  position: relative;
+  height: 50vh;
+  background: url(nekohaikei.jpg) center center;
+  background-size: cover;
+  }
+
+.jumbotron_3 {
+  position: relative;
+  height: 50vh;
+  background: url(nekohaikei2.jpg) center center;
+  background-size: cover;
+  }
+
+.jumbotron_4 {
+  position: relative;
+  height: 100%;
+  background: url(nekohaikei3.jpg) center center;
+  background-size: cover;
+  }
+
+  .bg-mask {
+    height: 100%;
+    background: rgba(255,255,255,0.75);
+  }
 
 /* footer */
 
@@ -153,24 +184,6 @@ aside {
       margin-top: 0px;
     }
   }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
 }
 
 .stats {
