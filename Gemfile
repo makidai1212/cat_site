@@ -22,6 +22,7 @@ gem 'bootsnap',   '1.4.5', require: false
 gem 'rails-i18n'
 gem 'counter_culture', '~> 1.8'
 gem 'kaminari'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'

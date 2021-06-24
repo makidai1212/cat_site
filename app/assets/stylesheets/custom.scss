@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 4vmax;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -49,12 +49,20 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 3vw;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: #777;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+h3 {
+  font-size: 4rem;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
   font-family: 'Yusei Magic', sans-serif;
 }
 
@@ -94,18 +102,18 @@ p {
 
 .jumbotron_2 {
   position: relative;
-  height: 50vh;
+  height: 100%;
   background: image-url("nekohaikei.jpg") center center;
   background-size: cover;
-  font-size: 1.3em;
+  font-size: 1.5vmax;
   }
 
 .jumbotron_3 {
   position: relative;
-  height: 50vh;
+  height: 100%;
   background: image-url("nekohaikei2.jpg") center center;
   background-size: cover;
-  font-size: 1.3em;
+  font-size: 2vmax;
   }
 
 .jumbotron_4 {
@@ -113,7 +121,7 @@ p {
   height: 100%;
   background: image-url("nekohaikei3.jpg") center center;
   background-size: cover;
-  font-size: 1.3em;
+  font-size: 1.5rem;
   }
 
   .bg-mask {
