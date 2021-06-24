@@ -98,7 +98,7 @@ p {
 .jumbotron {
   position: relative;
   height: 70vh;
-  background: image-url("4629742_m.jpg");
+  background: image-url("4629742_m.jpg") center;
   background-size: cover;
   font-size: 1.3em;
   }
@@ -108,7 +108,7 @@ p {
   height: 100%;
   background: image-url("nekohaikei.jpg");
   background-size: cover;
-  font-size: 1.5vmax;
+  font-size: 1.2vmax;
   }
 
 .jumbotron_3 {
@@ -124,7 +124,7 @@ p {
   height: 100%;
   background: image-url("nekohaikei3.jpg");
   background-repeat: repeat;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   }
 
   .bg-mask {
@@ -347,13 +347,14 @@ span.image {
   border-radius: 100px;
   width: 80px;
   height: 80px;
+  margin: 10px 0px 10px 30px;
 }
 
 .big-user-icon {
   border-radius: 100px;
-  width: 200px;
-  height: 200px;
-  padding: 20px;
+  width: 250px;
+  height: 250px;
+  margin-top: 30px;
 }
 
 .mini-user-icon {
@@ -365,3 +366,4 @@ span.image {
 .like {
   margin-left: 55px;
 }
+
