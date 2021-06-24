@@ -46,6 +46,7 @@ h1 {
   margin-bottom: 30px;
   text-align: center;
   font-family: 'Yusei Magic', sans-serif;
+  padding-top: 20px;
 }
 
 h2 {
@@ -56,6 +57,7 @@ h2 {
   font-weight: normal;
   color: #777;
   font-family: 'Yusei Magic', sans-serif;
+  padding-top: 20px;
 }
 
 h3 {
@@ -64,6 +66,7 @@ h3 {
   margin-bottom: 30px;
   text-align: center;
   font-family: 'Yusei Magic', sans-serif;
+  padding-top: 20px;
 }
 
 p {
@@ -95,7 +98,7 @@ p {
 .jumbotron {
   position: relative;
   height: 70vh;
-  background: image-url("4629742_m.jpg") center center;
+  background: image-url("4629742_m.jpg");
   background-size: cover;
   font-size: 1.3em;
   }
@@ -103,7 +106,7 @@ p {
 .jumbotron_2 {
   position: relative;
   height: 100%;
-  background: image-url("nekohaikei.jpg") center center;
+  background: image-url("nekohaikei.jpg");
   background-size: cover;
   font-size: 1.5vmax;
   }
@@ -111,7 +114,7 @@ p {
 .jumbotron_3 {
   position: relative;
   height: 100%;
-  background: image-url("nekohaikei2.jpg") center center;
+  background: image-url("nekohaikei2.jpg");
   background-size: cover;
   font-size: 2vmax;
   }
@@ -119,8 +122,8 @@ p {
 .jumbotron_4 {
   position: relative;
   height: 100%;
-  background: image-url("nekohaikei3.jpg") center center;
-  background-size: cover;
+  background: image-url("nekohaikei3.jpg");
+  background-repeat: repeat;
   font-size: 1.5rem;
   }
 
@@ -175,6 +178,7 @@ footer ul li {
 aside {
   section.user_info {
     margin-top: 20px;
+    padding-top: 20px;
   }
   section {
     padding: 10px 0;
@@ -187,6 +191,7 @@ aside {
       display: block;
       margin-bottom: 3px;
       line-height: 1;
+      padding-top: 5px;
     }
     h1 {
       font-size: 1.4em;
@@ -345,8 +350,9 @@ span.image {
 
 .big-user-icon {
   border-radius: 100px;
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
 }
 
 .mini-user-icon {

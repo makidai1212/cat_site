@@ -1,10 +1,9 @@
 <% provide(:title, '登録') %>
-<h1>登録</h1>
-
 <div class="row">
     <div class="jumbotron_2">
     <div class="bg-mask">
       <div class="container-fluid">
+        <h1>登録</h1>
         <div class="col-md-6 col-md-offset-3">
           <%= form_with(model: @user, local: true) do |f| %>
           <%= render 'shared/error_messages', object: f.object %>
