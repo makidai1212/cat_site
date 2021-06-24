@@ -35,7 +35,7 @@ textarea {
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 ,p {
   line-height: 1;
   font-family: 'Yusei Magic', sans-serif;
 }
@@ -342,6 +342,7 @@ span.image {
   }
 }
 
+/* icon */
 .user-icon {
   border-radius: 100px;
   width: 80px;
@@ -359,4 +360,8 @@ span.image {
   border-radius: 100px;
   width: 60px;
   height: 60px;
+}
+
+.like {
+  margin-left: 55px;
 }
