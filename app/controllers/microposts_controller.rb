@@ -20,6 +20,13 @@ class MicropostsController < ApplicationController
     redirect_to request.referrer || root_path
   end
 
+  def show
+    @micropost = Micropost.find(params[:id])
+    @comments = Comment.where(micropost_id: @micropost.id).order(created_at: :desc)
+    @comment = @micropost.comments.build
+    @micropost_comment = Comment.new
+  end
+
   private
 
   def micropost_params

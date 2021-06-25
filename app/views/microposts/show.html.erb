@@ -1,0 +1,53 @@
+<% provide(:title, "投稿詳細") %>
+  <div class="jumbotron_4">
+    <div class="bg-mask">
+      <div class="container">
+        <h1>投稿詳細ページ</h1>
+        <ol class="microposts">
+          <li id="@micropost-<%= @micropost.id %>">
+            <span class="user"><%= link_to @micropost.user.name, @micropost.user %></span>
+            <span class="content">
+              <%= @micropost.content %>
+              <%= image_tag @micropost.display_image if @micropost.image.attached? %>
+            </span>
+            <span class="timestamp">
+              <%= time_ago_in_words(@micropost.created_at) %> 前に投稿
+            <%= link_to "ホームへ戻る", root_path %>
+          </li>
+        </ol>
+        <%= form_with(model: [@micropost, @comment], local: true) do |f| %>
+          <%= f.text_area :content, class: "form-control", rows: 5, placeholder: "ここにコメントを入力してください"%>
+          <%= button_tag type: "submit", class: "btn btn-success float-right mt-1" do %>
+            <i class="far fa-comments"></i> コメントする
+          <% end %>
+        <% end %>
+
+        <div class="row">
+          <div class="col-md-8">
+            <% if @comments.any? %>
+              <h3>コメント一覧 (<%= @comments.count %>)</h3>
+              <ol class="microposts">
+                <% @comments.each do |comment| %>
+                  <li id="comments-<%= comment.id %>">
+                  <span class="user"><%= link_to comment.user.name, comment.user %></span>
+                  <span class="content">
+                    <%= comment.content %>
+                  </span>
+                  <span class="timestamp">
+                    <%= time_ago_in_words(comment.created_at) %> 前のコメント
+                      <% if current_user?(comment.user) %>
+                      <%= link_to "コメントを削除する", comment_path(comment.id), method: :delete,
+                                              data: { confirm: "本当にコメントを削除しますか?" } %>
+                      <% end %>
+                  </span>
+                  </li>
+                <% end %>
+              </ol>
+            <% else %>
+            <p>コメントがありません</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

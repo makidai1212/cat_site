@@ -194,7 +194,14 @@ aside {
       padding-top: 5px;
     }
     h1 {
-      font-size: 1.4em;
+      font-size: 5em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+    h2 {
+      font-size: 1.8em;
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
@@ -311,6 +318,8 @@ input {
   .content {
     display: block;
     margin-left: 60px;
+    font-size: 25px;
+    font-family: 'Yusei Magic', sans-serif;
     img {
       display: block;
       padding: 5px 0;
@@ -352,8 +361,8 @@ span.image {
 
 .big-user-icon {
   border-radius: 100px;
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   margin-top: 30px;
 }
 

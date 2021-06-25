@@ -1,10 +1,11 @@
 <%= form_with(model: @micropost, local: true) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "ここに投稿を入力してください" %>
+    <%= f.text_area :content, class: "form-control", rows: 5,  placeholder: "ここに投稿を入力してください" %>
   </div>
-  <%= f.submit "この内容で投稿する", class: "btn btn-primary" %>
-  <span class="image">
+  <%= button_tag type: "submit", class: "btn btn-success float-right mt-1" do %>
+  <i class="far fa-comments"></i> この内容で投稿する
+  <% end %>
     <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
   </span>
 <% end %>

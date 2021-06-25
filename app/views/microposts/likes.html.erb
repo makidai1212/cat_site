@@ -18,13 +18,13 @@
             <%= image_tag post.display_image if post.image.attached? %>
           </span>
           <span class="timestamp">
-            Posted <%= time_ago_in_words(post.created_at) %> ago.
+            <%= time_ago_in_words(post.created_at) %> 前の投稿
           </span>
           </li>
         <% end %>
       </ol>
     <% else %>
-     お気に入りの投稿がありません
+     <p>お気に入りの投稿がありません</p>
     <% end %>
   </div>
 </div>
