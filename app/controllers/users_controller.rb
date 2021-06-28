@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
+    @microposts = @user.microposts.limit(15).page(params[:page])
   end
 
   # アカウント有効化機能解除のため一部コメントアウトして修正。6/23
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.limit(15).page(params[:page])
   end
 
   def destroy
@@ -68,7 +68,7 @@ class UsersController < ApplicationController
   end
 
   def likes
-    @likes = Like.where(user_id: current_user).page(params[:page])
+    @likes = Like.where(user_id: current_user).limit(15).page(params[:page])
   end
 
   private
