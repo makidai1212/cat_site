@@ -16,7 +16,10 @@
         </aside>
         <div class="col-md-8">
           <h3>みんなの投稿</h3>
-          <%= render 'shared/feed' %>
+            <ol class="microposts">
+              <%= render @article %>
+            </ol>
+            <%= will_paginate @paginatable_array %>
         </div>
       </div>
     </div>
