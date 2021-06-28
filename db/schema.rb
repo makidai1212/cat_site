@@ -33,16 +33,6 @@ ActiveRecord::Schema.define(version: 2021_06_25_020522) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "commemts", force: :cascade do |t|
-    t.string "content"
-    t.integer "user_id", null: false
-    t.integer "micropost_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["micropost_id"], name: "index_commemts_on_micropost_id"
-    t.index ["user_id"], name: "index_commemts_on_user_id"
-  end
-
   create_table "comments", force: :cascade do |t|
     t.text "content"
     t.integer "user_id", null: false
@@ -102,8 +92,6 @@ ActiveRecord::Schema.define(version: 2021_06_25_020522) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "commemts", "microposts"
-  add_foreign_key "commemts", "users"
   add_foreign_key "comments", "microposts"
   add_foreign_key "comments", "users"
   add_foreign_key "microposts", "users"

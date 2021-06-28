@@ -10,7 +10,7 @@ class MicropostsController < ApplicationController
       redirect_to root_path
     else
       # 全体表示に変更したためコメントアウト
-      # @feed_items = current_user.feed.paginate(page: params[:page])
+      @feed_items = current_user.feed.paginate(page: params[:page])
       # ここの3行は全体表示に変更したため追加
       @article = Micropost.order(created_at: :desc).limit(15).page(params[:page])
       @paginatable_array = Kaminari.paginate_array([], total_count: 150).page(params[:page])

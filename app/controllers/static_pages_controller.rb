@@ -9,8 +9,6 @@ class StaticPagesController < ApplicationController
     # 全部表示させるための設定
     @article = Micropost.order(created_at: :desc).limit(15).page(params[:page])
     @paginatable_array = Kaminari.paginate_array([], total_count: 150).page(params[:page])
-
-    @all_ranks = Micropost.find(Like.group(:micropost_id).order('count(micropost_id) desc').limit(5).pluck(:micropost_id))
   end
 
   def about
