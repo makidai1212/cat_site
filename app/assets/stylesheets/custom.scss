@@ -1,6 +1,14 @@
+/* bootstrap */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/* google-font */
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* font-awesome */
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 
 /* mixins, variables, etc. */
 
@@ -194,7 +202,7 @@ aside {
       padding-top: 5px;
     }
     h1 {
-      font-size: 5em;
+      font-size: 3em;
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
@@ -299,7 +307,9 @@ input {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
+    font-size: 1.5em
   }
+  
 }
 
 /* microposts */
@@ -328,6 +338,11 @@ input {
   }
   .timestamp {
     color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .comment {
+    color: tomato;
     display: block;
     margin-left: 60px;
   }
