@@ -1,11 +1,12 @@
 <% provide(:title, "お気に入り投稿一覧") %>
-<div class="row">
+<div class="container-fluid">
   <div class="jumbotron_4">
     <div class="bg-mask">
-      <div class="container">
+      <div class="row">
         <div class="col-md-8">
           <% if @likes.any? %>
             <h3>お気に入り投稿一覧 (<%= @likes.count %>)</h3>
+            <div class="align-items-center">
             <ol class="microposts">
               <% @likes.each do |like| %>
                 <% post = Micropost.find_by(id: like.micropost_id) %>

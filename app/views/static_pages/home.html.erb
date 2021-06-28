@@ -1,8 +1,8 @@
 <% if logged_in? %>
-  <div class="row">
-    <div class="jumbotron_4">
+<div class="container-fluid">
+  <div class="jumbotron_4">
     <div class="bg-mask">
-      <div class="container">
+      <div class="row">
         <aside class="col-md-4">
           <section class="user_info">
             <%= render 'shared/user_info' %>
@@ -20,8 +20,8 @@
         </div>
       </div>
     </div>
-    </div>
   </div>
+</div>
 <% else %>
     <div class="jumbotron">
       <div class="container-fluid">
