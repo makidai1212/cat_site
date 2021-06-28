@@ -12,28 +12,28 @@
                 <% post = Micropost.find_by(id: like.micropost_id) %>
                 <li id="micropost-<%= post.id %>">
                 <% if post.user.image? %>
-                <%= link_to image_tag( post.user.image.thumb.url, class: "mini-user-icon"), post.user %>
-                <% else %>
-                <%= link_to image_tag('default.jpg', class: "mini-user-icon"), post.user %>
+                  <%= link_to image_tag( post.user.image.thumb.url, class: "mini-user-icon"), post.user %>
+                  <% else %>
+                  <%= link_to image_tag('default.jpg', class: "mini-user-icon"), post.user %>
                 <% end %>
                 <span class="user"><%= link_to post.user.name, post.user %></span>
                 <span class="content">
-                  <%= post.content %>
-                  <%= image_tag post.display_image if post.image.attached? %>
-                    <span class="comment">
-                    <%= icon("far", "comments", class: "comments-icon") %> <%= post.comments.count %>
-                    <br>
-                    <%= link_to '投稿にコメントする', micropost_path(post) %>
-                    </span>
-                   </span>
+                <%= post.content %>
+                <%= image_tag post.display_image if post.image.attached? %></span>
+                <span class="comment">
+                <%= icon("far", "comments", class: "comments-icon") %> <%= post.comments.count %>
+                <br>
+                <%= link_to '投稿にコメントする', micropost_path(post) %>
+                </span>
+                </span>
                 <span class="timestamp">
-                  <%= time_ago_in_words(post.created_at) %>前に投稿
+                <%= time_ago_in_words(post.created_at) %>前に投稿
                 <%= form_with(model: post.likes.find_by(user_id: current_user.id), method: :delete, local: true) do |f| %>
                 <%= button_tag(class: "btn btn-warning btn-xs") do %>
                 お気に入りから解除する<%= content_tag :span %>
+                <% end %>
                 </span>
-              <% end %>
-            <% end %>
+                <% end %>
                 </li>
               <% end %>
             </ol>

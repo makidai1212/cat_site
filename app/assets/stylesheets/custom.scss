@@ -336,16 +336,17 @@ input {
       padding: 5px 0;
     }
   }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
   .comment {
     color: tomato;
     display: block;
     margin-left: 60px;
   }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+
   .gravatar {
     float: left;
     margin-right: 10px;
@@ -391,4 +392,6 @@ span.image {
 .like {
   margin-left: 55px;
 }
+
+/* likes */
 
