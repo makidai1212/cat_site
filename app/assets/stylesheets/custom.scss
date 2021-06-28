@@ -1,6 +1,14 @@
+/* bootstrap */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/* google-font */
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* font-awesome */
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 
 /* mixins, variables, etc. */
 
@@ -301,6 +309,7 @@ input {
     border-bottom: 1px solid $gray-lighter;
     font-size: 1.5em
   }
+  
 }
 
 /* microposts */
@@ -329,6 +338,11 @@ input {
   }
   .timestamp {
     color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .comment {
+    color: tomato;
     display: block;
     margin-left: 60px;
   }

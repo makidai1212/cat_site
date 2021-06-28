@@ -23,6 +23,7 @@ gem 'rails-i18n'
 gem 'counter_culture', '~> 1.8'
 gem 'kaminari'
 gem 'jquery-rails'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'

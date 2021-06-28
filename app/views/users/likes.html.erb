@@ -20,9 +20,14 @@
                 <span class="content">
                   <%= post.content %>
                   <%= image_tag post.display_image if post.image.attached? %>
-                </span>
+                    <span class="comment">
+                    <%= icon("far", "comments", class: "comments-icon") %> <%= post.comments.count %>
+                    <br>
+                    <%= link_to '投稿にコメントする', micropost_path(post) %>
+                    </span>
+                   </span>
                 <span class="timestamp">
-                  Posted <%= time_ago_in_words(post.created_at) %> ago.
+                  <%= time_ago_in_words(post.created_at) %>前に投稿
                 <%= form_with(model: post.likes.find_by(user_id: current_user.id), method: :delete, local: true) do |f| %>
                 <%= button_tag(class: "btn btn-warning btn-xs") do %>
                 お気に入りから解除する<%= content_tag :span %>
