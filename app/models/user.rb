@@ -94,8 +94,7 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
 
-  
-
+  # 画像とモデルの関連付けを行う
   mount_uploader :image, ImageUploader
 
   private
