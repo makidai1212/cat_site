@@ -3,7 +3,7 @@
   <div class="jumbotron_4">
     <div class="bg-mask">
       <div class="row">
-        <aside class="col-md-4">
+        <aside class="col-md-3">
           <section class="user_info">
             <%= render 'shared/user_info' %>
           </section>
@@ -14,12 +14,11 @@
             <%= render 'shared/micropost_form' %>
           </section>
           </aside>
-          <div class="col-md-8">
+          <div class="col-md-9">
             <h3>みんなの投稿</h3>
               <ol class="microposts">
-                <%= render @feed_items %>
+                <%= render 'shared/article' %>
               </ol>
-              <%= will_paginate @feed_items,params: {controller: :static_pages, action: :home} %>
           </div>
       </div>
     </div>
