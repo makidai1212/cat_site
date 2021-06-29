@@ -77,6 +77,14 @@ h3 {
   padding-top: 20px;
 }
 
+h4 {
+  font-size: 2.5rem;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  font-family: 'Yusei Magic', sans-serif;
+  padding-top: 20px;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -187,6 +195,7 @@ aside {
   section.user_info {
     margin-top: 20px;
     padding-top: 20px;
+    text-align: center;
   }
   section {
     padding: 10px 0;
@@ -203,14 +212,14 @@ aside {
     }
     h1 {
       font-size: 3em;
-      text-align: left;
+      text-align: center;
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
     }
     h2 {
       font-size: 1.8em;
-      text-align: left;
+      text-align: center;
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
@@ -219,6 +228,7 @@ aside {
 }
 
 .stats {
+  display: flex;
   overflow: auto;
   margin-top: 0;
   padding: 0;
@@ -239,6 +249,10 @@ aside {
   strong {
     display: block;
   }
+}
+
+.statssub {
+  margin: 0 auto;
 }
 
 .user_avatars {
@@ -334,8 +348,11 @@ input {
     img {
       display: block;
       padding: 5px 0;
+      width: 100%;
+      max-width: 100%;
     }
   }
+
   .comment {
     color: tomato;
     display: block;
@@ -393,5 +410,36 @@ span.image {
   margin-left: 55px;
 }
 
-/* likes */
+/* ranking */
+
+.ranking {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    padding-top: 0;
+    font-size: 1.2em;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    font-size: 18px;
+    font-family: 'Yusei Magic', sans-serif;
+    img {
+      display: block;
+      padding: 5px 0;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+}
 
