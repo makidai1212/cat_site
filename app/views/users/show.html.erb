@@ -1,8 +1,8 @@
 <% provide(:title, @user.name) %>
-<div class="row">
+<div class="container-fluid">
   <div class="jumbotron_4">
     <div class="bg-mask">
-      <div class="container">
+      <div class="row">
         <aside class="col-md-4">
           <section class="user_info">
             <h1>
@@ -21,8 +21,8 @@
         </aside>
         <div class="col-md-8">
           <%= render 'follow_form' if logged_in? %>
-          <% if @user.microposts.any? %>
             <h3><%= @user.name %> さんの投稿一覧 (<%= @user.microposts.count %>)</h3>
+            <% if @user.microposts.any? %>
             <ol class="microposts">
               <%= render @microposts %>
             </ol>
