@@ -1,8 +1,8 @@
 <% provide(:title, @title) %>
-<div class="row">
+<div class="container-fluid">
   <div class="jumbotron_4">
     <div class="bg-mask">
-      <div class="container">
+      <div class="row">
         <aside class="col-md-4">
           <section class="user_info">
             <% if @user.image? %>
@@ -16,6 +16,8 @@
           </section>
           <section class="stats">
             <%= render 'shared/stats' %>
+          </section>
+          <section class='stats'>
             <% if @users.any? %>
               <div class="user_avatars">
                 <% @users.each do |user| %>
