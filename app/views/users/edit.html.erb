@@ -29,6 +29,13 @@
           <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png', class: "image-select-btn" %>   
           <%= f.submit "この内容に変更する", class: "btn btn-primary" %>
         <% end %>
+          <div class="taikai">
+          <% if current_user?(@user) %>
+          <%= link_to "退会する", @user, method: :delete,
+                                  data: { confirm: "本当に退会しますか?" } , class: "btn btn-lg btn-warning" %>
+          <% end %>
+          </div>
+
       </div>
       </div>  
     </div>
