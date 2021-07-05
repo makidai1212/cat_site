@@ -1,4 +1,5 @@
 <% if !current_user?(micropost.user) %>
+<%= content_tag :span, "お気に入り登録数(#{micropost.likes_count})", class: "glyphicon glyphicon-heart" %>
   <span class="like">
     <% if micropost.iine?(current_user) %>
       <%= form_with(model: micropost.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %>
