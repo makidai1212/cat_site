@@ -8,7 +8,7 @@
         <%= form_with(model: @user, local: true) do |f| %>
           <%= render 'shared/error_messages', object: f.object%>
 
-          <%= f.label :name, "名前" %>
+          <%= f.label :name, "ニックネーム" %>
           <%= f.text_field :name, class: 'form-control' %>
 
           <%= f.label :email, "メールアドレス" %>
@@ -32,7 +32,7 @@
           <div class="taikai">
           <% if current_user?(@user) %>
           <%= link_to "退会する", @user, method: :delete,
-                                  data: { confirm: "本当に退会しますか?" } , class: "btn btn-lg btn-warning" %>
+                                  data: { confirm: "退会しないで〜" } , class: "btn btn-lg btn-warning" %>
           <% end %>
           </div>
 

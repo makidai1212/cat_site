@@ -29,8 +29,9 @@
   </div>
 </div>
 <% else %>
-    <div class="jumbotron">
-      <div class="container-fluid">
+    <div class="container-fluid">
+      <div class="jumbotron">
+      <div class="row">
         <h1>Welcome to the Neko Neko</h1>
         <h2>猫とハッピーな毎日を</h2>
         <div class="container bg-light">
@@ -39,6 +40,10 @@
           <%= link_to "ログイン", login_path, class: "btn btn-lg btn-success" %>
           </div>
         </div>
+        </div>
       </div>
     </div>
+          <div class="about">
+          <%= render 'shared/about' %>
+          </div>
 <% end %>

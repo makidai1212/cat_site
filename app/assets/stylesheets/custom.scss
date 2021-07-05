@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 ,p {
 }
 
 h1 {
-  font-size: 4vmax;
+  font-size: 4vw;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -86,8 +86,12 @@ h4 {
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1.5em;
   line-height: 1.7em;
+}
+
+.about {
+  color: fuchsia;
 }
 
 /* header */
@@ -113,7 +117,7 @@ p {
 /* home */
 .jumbotron {
   position: relative;
-  height: 70vh;
+  height: 50vmax;
   background: image-url("4629742_m.jpg") center;
   background-size: cover;
   font-size: 1.3em;
@@ -322,6 +326,7 @@ input {
 .users {
   list-style: none;
   margin: 0;
+  text-align: center;
   li {
     overflow: auto;
     padding: 5px 0;
