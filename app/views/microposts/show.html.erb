@@ -4,6 +4,7 @@
     <div class="bg-mask">
       <div class="row">
         <h1>投稿詳細ページ</h1>
+        <div class="col-md-6 col-md-offset-3">
         <ol class="microposts">
           <li id="@micropost-<%= @micropost.id %>">
             <span class="user"><%= link_to @micropost.user.name, @micropost.user %></span>
@@ -22,9 +23,6 @@
             <i class="far fa-comments"></i> コメントする
           <% end %>
         <% end %>
-
-        <div class="row">
-          <div class="col-md-8">
             <% if @comments.any? %>
               <h3>コメント一覧 (<%= @comments.count %>)</h3>
               <ol class="microposts">
@@ -52,3 +50,5 @@
       </div>
     </div>
   </div>
+
+  
