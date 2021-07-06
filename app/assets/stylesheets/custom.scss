@@ -449,11 +449,13 @@ span.image {
   }
 }
 
+/* before login */
 .home-button {
   margin-top: 125px;
   text-align: right;
 }
 
+/* page_top */
 #page_top{
   width: 90px;
   height: 90px;
@@ -463,6 +465,7 @@ span.image {
   background: #ef3f98;
   opacity: 0.6;
   border-radius: 50%;
+  margin-bottom: 50px;
 }
 #page_top a{
   position: relative;

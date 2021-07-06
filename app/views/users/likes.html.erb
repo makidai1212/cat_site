@@ -31,8 +31,7 @@
                     <%= form_with(model: post.likes.find_by(user_id: current_user.id), method: :delete, local: true) do |f| %>
                       <%= button_tag(class: "btn btn-warning btn-xs") do %>
                       お気に入りから解除する<%= content_tag :span %>
-                    <% end %>
-                    
+                    <% end %>               
                   </span>
                 <% end %>
                 </li>
