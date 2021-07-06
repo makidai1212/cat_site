@@ -1,8 +1,8 @@
 <% provide(:title, "ログインフォーム") %>
-<div class="row">
+<div class="container-fluid">
   <div class="jumbotron_2">
   <div class="bg-mask">
-    <div class="container-fluid">
+    <div class="row">
     <h1>ログイン</h1>
       <div class="col-md-6 col-md-offset-3">
         <%= form_with(url: login_path, scope: :session, local: true) do |f| %>

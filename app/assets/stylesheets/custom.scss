@@ -86,7 +86,7 @@ h4 {
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 18px;
   line-height: 1.7em;
 }
 
@@ -117,7 +117,8 @@ p {
 /* home */
 .jumbotron {
   position: relative;
-  height: 50vmax;
+  height: 100vmin;
+  width: 100%;
   background: image-url("4629742_m.jpg") center;
   background-size: cover;
   font-size: 1.3em;
@@ -449,5 +450,6 @@ span.image {
 }
 
 .home-button {
-  margin-top: 40px;
+  margin-top: 70px;
+  text-align: right;
 }

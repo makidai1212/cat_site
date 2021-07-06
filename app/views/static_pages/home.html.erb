@@ -29,23 +29,20 @@
   </div>
 </div>
 <% else %>
-    <div class="container-fluid">
-      <div class="jumbotron">
-      <div class="row">
-        <h1>Welcome to the Neko Neko</h1>
-        <h2>猫とハッピーな毎日を</h2>
-        <div class="container bg-light">
-          <div class="text-right">
-            <div class="home-button">
-              <%= link_to "新規登録", signup_path , class: "btn btn-lg btn-warning" %>
-              <%= link_to "ログイン", login_path, class: "btn btn-lg btn-success" %>
-            </div>
+  <div class="container-fluid">
+    <div class="jumbotron">
+    
+      <h1>Welcome to the Neko Neko</h1>
+      <h2>猫とハッピーな毎日を</h2>
+
+          <div class="home-button">
+            <%= link_to "新規登録", signup_path , class: "btn btn-lg btn-warning btn-primary" %>
+            <%= link_to "ログイン", login_path, class: "btn btn-lg btn-success btn-primary" %>
           </div>
-        </div>
-        </div>
-      </div>
+
     </div>
-          <div class="about">
-          <%= render 'shared/about' %>
-          </div>
+  </div>
+    <div class="about">
+      <%= render 'shared/about' %>
+    </div>
 <% end %>
