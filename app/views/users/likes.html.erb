@@ -38,6 +38,8 @@
               <% end %>
             </ol>
             <%= will_paginate @likes %>
+            <div id="page_top"><a href="#"></a></div>
+            <%= javascript_pack_tag 'home/pagetag' %>
           <% else %>
           <h3>お気に入りの投稿がありません</h3>
           <% end %>
