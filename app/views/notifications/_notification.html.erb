@@ -1,3 +1,4 @@
+<li>
 <% visitor = notification.visitor %>
 <% visited = notification.visited %>
 
@@ -29,7 +30,6 @@
                   <%= 'にコメントしました' %>
                 <% end %>
               </span>
-             
               <p class="text-muted.mb-0">
                 <%= Comment.find_by(id: notification.comment_id)&.comment %>
               </p>
@@ -41,3 +41,4 @@
       </span>
   </div>
 </div>
+</li>

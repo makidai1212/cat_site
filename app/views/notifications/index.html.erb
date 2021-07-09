@@ -1,7 +1,21 @@
-<% notifications = @notifications.where.not(visitor_id: current_user.id) %>
-  <% if notifications.exists? %>
-    <%= render notifications %>
-    <%= will_paginate @notifications %>
-  <% else %>
-    <p>通知はありません</p>
-  <% end %>
+<% provide(:title, '通知一覧') %>
+<div class="container-fluid">
+  <div class="jumbotron_4">
+    <div class="bg-mask">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>通知一覧</h3>
+          <ul class="tuuti">
+            <% notifications = @notifications.where.not(visitor_id: current_user.id) %>
+              <% if notifications.exists? %>
+                <%= render notifications %>
+                <%= will_paginate @notifications %>
+              <% else %>
+                <p>通知はありません</p>
+              <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
