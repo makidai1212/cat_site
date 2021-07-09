@@ -5,6 +5,9 @@ class CommentsController < ApplicationController
     @comment = micropost.comments.build(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
+      # 通知にデータを送るやつ
+      micropost.create_notification_comment(current_user, @comment.id)
+
       flash[:success] = "コメントしました！"
       redirect_to micropost_path(micropost)
      else

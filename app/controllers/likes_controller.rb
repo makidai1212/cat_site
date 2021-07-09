@@ -5,6 +5,9 @@ class LikesController < ApplicationController
       @micropost = Micropost.find(params[:micropost_id])
       unless @micropost.iine?(current_user)
         @micropost.iine(current_user)
+        # 通知にデータを送るやつ
+        @micropost.create_notification_like(current_user)
+
         @micropost.reload
         respond_to do |format|
           format.html { redirect_to request.referrer || root_url }

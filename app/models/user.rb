@@ -12,7 +12,14 @@ class User < ApplicationRecord
                                         source: :follower
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
-  
+
+  has_many :active_notifications, class_name: 'Notification',
+                                  foreign_key: 'visitor_id',
+                                  dependent: :destroy
+  has_many :passive_notifications,  class_name: 'Notification',
+                                    foreign_key: 'visited_id',
+                                    dependent: :destroy
+
   attr_accessor :remember_token, :activation_token, :reset_token
   before_create :create_activation_digest
   before_save :downcase_email
@@ -94,6 +101,16 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
 
+  def create_notification_follow(current_user)
+    temp = Notification.where(["visitor_id = ? and visited_id = ? and action = ? ",current_user.id, id, 'follow'])
+    if temp.blank?
+      notification = current_user.active_notifications.build( visited_id: id,
+                                                              action: 'follow'
+                                                            )
+      notification.save if notification.valid?
+    end
+  end
+
   # 画像とモデルの関連付けを行う
   mount_uploader :image, ImageUploader
 
@@ -106,4 +123,5 @@ class User < ApplicationRecord
    def downcase_email
     self.email = self.email.downcase
    end
+
 end

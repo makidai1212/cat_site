@@ -13,6 +13,11 @@
       <ul id="navbar" class="nav navbar-nav navbar-right navbar-collapse collapse">
         <li><%= link_to "メインページ", root_path %></li>
         <% if logged_in? %>
+          <li class="notification"><%= link_to '通知', notifications_path %>
+            <% if unchecked_notifications.any? %>
+              <%= icon("fa", "circle", class: "tsuuti-icon") %>
+            <% end %>
+          </li>
           <li><%= link_to "お気に入りの投稿一覧", likes_user_path(current_user) %></li>
           <li><%= link_to "登録している人 or ねこ", users_path %></li>
           <li class="dropdown">

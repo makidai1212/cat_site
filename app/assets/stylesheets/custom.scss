@@ -459,7 +459,7 @@ span.image {
   width: 90px;
   height: 90px;
   position: fixed;
-  right: 0;
+  right: -100px;
   bottom: 0;
   background: #ef3f98;
   opacity: 0.6;
@@ -500,4 +500,14 @@ span.image {
   left: 0;
   margin: auto;
   text-align: center;
+}
+
+/* notification */
+.tsuuti-icon {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  padding-left: 1rem;
+  padding-top: 0rem;
+  color: #efa04c;
 }
