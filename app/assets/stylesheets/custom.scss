@@ -505,11 +505,11 @@ span.image {
 /* notification */
 .tsuuti-icon {
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 0px;
   padding-left: 1rem;
   padding-top: 0rem;
-  color: #efa04c;
+  color: tomato;
 }
 
 /* tuuti index */
@@ -528,6 +528,10 @@ span.image {
 
 .p-3 {
   padding: 2% !important;
+}
+
+.btn {
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 .btn2 {
