@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
       flash[:danger] = "ログインしてください"
       redirect_to login_url
     end
-   end
+  end
    
 end
