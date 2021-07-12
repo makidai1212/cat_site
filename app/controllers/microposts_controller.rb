@@ -14,7 +14,6 @@ class MicropostsController < ApplicationController
       # ここの3行は全体表示に変更したため追加
       @article = Micropost.order(created_at: :desc).limit(15).page(params[:page])
       @paginatable_array = Kaminari.paginate_array([], total_count: 150).page(params[:page])
-      @all_ranks = Micropost.find(Like.group(:micropost_id).order('count(micropost_id) desc').limit(5).pluck(:micropost_id))
       render 'static_pages/home'
     end
   end

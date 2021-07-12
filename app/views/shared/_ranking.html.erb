@@ -1,13 +1,16 @@
 <ol class="ranking">
-  <% if @all_ranks %>
+  <% if @all_ranks_id %>
   <h4>お気に入り件数 トップ ５ 投稿</h4>
-    <% @all_ranks.each do |rank| %>
-      <% post = Micropost.find_by(id: rank.id) %>
-      <li id="micropost-<%= rank.id %>">
-      <span class="user"><%= link_to post.user.name, post.user %></span>
+    <% @all_ranks_id.each do |rank| %>
+      <% post = Micropost.find_by(id: rank) %>
+      <li id="micropost-<%= rank %>">
+      <span class="user">
+        <%= link_to post.user.name, post.user %>
+      </span>
       <span class="content">
-      <%= link_to post.content, micropost_path(post) %>
-      <%= image_tag post.display_image if post.image.attached? %></span>
+        <%= link_to post.content, micropost_path(post) %>
+        <%= image_tag post.display_image if post.image.attached? %>
+      </span>
       <span class="timestamp">
       <%= time_ago_in_words(post.created_at) %>前に投稿
       </span>
