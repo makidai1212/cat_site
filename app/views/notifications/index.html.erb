@@ -4,10 +4,10 @@
     <div class="bg-mask">
       <div class="row">
         <div class="col-md-12">
-          <h3>通知一覧</h3>
           <ul class="tuuti">
             <% notifications = @notifications.where.not(visitor_id: current_user.id) %>
               <% if notifications.exists? %>
+              <h3>通知一覧</h3>
                 <%= render notifications %>
                 <%= will_paginate @notifications %>
               <% else %>
