@@ -1,9 +1,12 @@
 <ol class="ranking">
   <% if @all_ranks_id %>
   <h4>お気に入り件数 トップ ５ 投稿</h4>
-    <% @all_ranks_id.each do |rank| %>
+    <% @all_ranks_id.each.with_index(1) do |rank, i| %>
       <% post = Micropost.find_by(id: rank) %>
       <li id="micropost-<%= rank %>">
+      <span>
+      <p>第<%= i %>位</p>
+      </span>
       <span class="user">
         <%= link_to post.user.name, post.user %>
       </span>
