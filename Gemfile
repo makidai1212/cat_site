@@ -28,6 +28,7 @@ gem 'font-awesome-sass'
 group :development, :test do
   gem 'sqlite3', '1.4.1'
   gem 'byebug',  '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'spring-commands-rspec'
 end
 
 group :development do
@@ -46,6 +47,10 @@ group :test do
   gem 'minitest-reporters',       '1.3.8'
   gem 'guard',                    '2.16.2'
   gem 'guard-minitest',           '2.4.6'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
+  gem 'launchy'
 end
 
 group :production do
