@@ -3,7 +3,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
   storage :file
-
+  # storage :fog
 
 
   # 画像の上限を640x480にする
