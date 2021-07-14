@@ -24,6 +24,8 @@ gem 'counter_culture', '~> 1.8'
 gem 'kaminari'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
+gem 'fog-aws'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'

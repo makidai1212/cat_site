@@ -1,6 +1,6 @@
 <li id="micropost-<%= micropost.id %>">
   <% if micropost.user.image? %>
-  <%= link_to image_tag( micropost.user.image.thumb.url, class: "mini-user-icon"), micropost.user %>
+  <%= link_to image_tag( micropost.user.image.url, class: "mini-user-icon"), micropost.user %>
   <% else %>
   <%= link_to image_tag('default.jpg', class: "mini-user-icon"), micropost.user %>
   <% end %>
