@@ -40,4 +40,4 @@
 yarn-debug.log*
 .yarn-integrity
 
-gitignore_sample/direct/sample1
+/direct/sample1
