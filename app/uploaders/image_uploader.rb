@@ -3,6 +3,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
   # storage :file
+  # S3に保存するやつ
   storage :fog
 
 
