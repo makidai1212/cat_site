@@ -40,4 +40,5 @@
 yarn-debug.log*
 .yarn-integrity
 
-/direct2
+/sample2.rb
+/direct/sample1.rb
