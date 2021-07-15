@@ -1,8 +1,0 @@
-<% if current_user.image? %>
-<%= link_to image_tag(current_user.image.thumb.url, class: "big-user-icon"), current_user %>
-<% else %>
-<%= link_to image_tag('default.jpg', class: "big-user-icon"), current_user %>
-<% end %>
-<h1><%= current_user.name %></h1>
-<h2><%= link_to "自分の投稿", current_user %></h2>
-<h2><%= pluralize(current_user.microposts.count, "件投稿しました") %></h2>

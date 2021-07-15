@@ -1,7 +1,0 @@
-<% if @article.any? %>
-  <ol class="microposts">
-    <%= render @article %>
-  </ol>
-  <%= will_paginate @paginatable_array,
-    params: { controller: :static_pages, action: :home } %>
-<% end %>

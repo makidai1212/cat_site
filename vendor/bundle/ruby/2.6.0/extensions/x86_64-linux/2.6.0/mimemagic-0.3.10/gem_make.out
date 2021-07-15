@@ -1,3 +1,0 @@
-current directory: /home/vagrant/rails/cat_site/vendor/bundle/ruby/2.6.0/gems/mimemagic-0.3.10/ext/mimemagic
-/home/vagrant/.rbenv/versions/2.6.3/bin/ruby -rrubygems /home/vagrant/rails/cat_site/vendor/bundle/ruby/2.6.0/gems/rake-12.3.3/exe/rake RUBYARCHDIR\=/home/vagrant/rails/cat_site/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0/mimemagic-0.3.10 RUBYLIBDIR\=/home/vagrant/rails/cat_site/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0/mimemagic-0.3.10
-mkdir -p /home/vagrant/rails/cat_site/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0/mimemagic-0.3.10/mimemagic
