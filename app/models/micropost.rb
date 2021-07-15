@@ -16,6 +16,7 @@ class Micropost < ApplicationRecord
 
   # 表示用のリサイズ済み画像を返す
   def display_image
+    # variantは幅を統一するメソッド
     image.variant(resize_to_limit: [500, 500])
   end
 
