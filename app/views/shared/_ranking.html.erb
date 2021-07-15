@@ -1,0 +1,23 @@
+<ol class="ranking">
+  <% if @all_ranks_ids %>
+  <h4>お気に入り件数 トップ ５ 投稿</h4>
+    <% @all_ranks_ids.each.with_index(1) do |rank_id, i| %>
+      <% post = Micropost.find_by(id: rank_id) %>
+      <li id="micropost-<%= rank_id %>">
+      <span>
+      <p>第<%= i %>位</p>
+      </span>
+      <span class="user">
+        <%= link_to post.user.name, post.user %>
+      </span>
+      <span class="content">
+        <%= link_to post.content, micropost_path(post) %>
+        <%= image_tag post.display_image if post.image.attached? %>
+      </span>
+      <span class="timestamp">
+      <%= time_ago_in_words(post.created_at) %>前に投稿
+      </span>
+      </li>
+    <% end %>
+  <% end%>
+</ol>

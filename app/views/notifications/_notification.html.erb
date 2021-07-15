@@ -1,0 +1,44 @@
+<li>
+<% visitor = notification.visitor %>
+<% visited = notification.visited %>
+
+<div class="col-md-6.mx-auto">
+  <div class="form-inline">
+    <span>
+      <%= link_to user_path(visitor) do %>
+        <strong> 
+          <%= visitor.name %>
+        </strong> 
+      <% end %>
+        <%= 'さんが' %>
+        <% case notification.action %>
+          <% when 'follow' then %>
+            <%= 'あなたをフォローしました' %>
+          <% when 'like' then %>
+            <%= link_to 'あなたの投稿', notification.micropost, style: "font-weight: bold;" %>
+            <%= 'をお気に入りに追加しました' %>
+          <% when 'comment' then %>
+            <% if notification.micropost.user_id == visited.id %>
+              <%= link_to 'あなたの投稿', notification.micropost, style: "font-weight: bold;" %>
+              <%= 'にコメントしました' %>
+            <% else %>
+              <span>
+                <%= link_to micropost_path(notification.micropost) do %>
+                  <strong>
+                    <%= notification.micropost.user.name + 'さんの投稿' %>
+                  </strong>
+                  <%= 'にコメントしました' %>
+                <% end %>
+              </span>
+              <p class="text-muted.mb-0">
+                <%= Comment.find_by(id: notification.comment_id)&.comment %>
+              </p>
+            <% end %>
+        <% end %>
+    </span>
+      <span class="moderate-font">
+      <%= "( #{time_ago_in_words(notification.created_at)}前 )" %>
+      </span>
+  </div>
+</div>
+</li>

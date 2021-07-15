@@ -1,0 +1,29 @@
+<% provide(:title, "ログインフォーム") %>
+<div class="container-fluid">
+  <div class="jumbotron_2">
+  <div class="bg-mask">
+    <div class="row">
+    <h1>ログイン</h1>
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+          <%= f.label :email , "メールアドレス"%>
+          <%= f.email_field :email, class: 'form-control' %>
+
+          <%= f.label :password , "パスワード" %>
+          <%= link_to "(パスワードを忘れた方はこちら)", new_password_reset_path %>
+          <%= f.password_field :password, class: 'form-control' %>
+
+          <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span>ログイン状態を保存する</span>
+          <% end %>
+
+          <%= f.submit "ログイン", class: "btn btn-success btn-primary" %>
+        <% end %>
+        <p>登録がまだの方はこちらへ〜 <%= link_to "新しく登録する", signup_path %></p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
