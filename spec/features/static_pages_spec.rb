@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 # describe 'クラス名' do
-end
+
 RSpec.describe 'Home' do
   specify '画面の表示' do
     # get root_pathみたいなもん
@@ -41,7 +41,7 @@ end
 
 # describe 'テストの対象'
 RSpec.describe 'サイトのリンクのテスト' do
-  # contxt '特定の条件'
+  # contxt '特定の条件(この条件なら〜)'
   context 'root_pathにアクセス' do
     # 共通の前提条件を決める
     before { visit root_path }
@@ -69,4 +69,3 @@ RSpec.describe 'サイトのリンクのテスト' do
       end
   end
 end
-
