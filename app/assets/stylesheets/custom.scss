@@ -122,6 +122,7 @@ p {
   background: image-url("4629742_m.jpg") center;
   background-size: cover;
   font-size: 1.3em;
+  margin-top: 20px;
   }
 
 .jumbotron_2 {
@@ -130,6 +131,7 @@ p {
   background: image-url("nekohaikei.jpg");
   background-size: cover;
   font-size: 1.3vmax;
+  margin-top: 20px;
   }
 
 .jumbotron_3 {
@@ -138,6 +140,7 @@ p {
   background: image-url("nekohaikei2.jpg");
   background-size: cover;
   font-size: 2vmax;
+  margin-top: 20px;
   }
 
 .jumbotron_4 {
@@ -146,6 +149,7 @@ p {
   background: image-url("nekohaikei3.jpg");
   background-repeat: repeat;
   font-size: 1.4rem;
+  margin-top: 20px;
   }
 
   .bg-mask {
@@ -541,4 +545,10 @@ span.image {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Yusei Magic', sans-serif;
+}
+
+.navbar {
+  opacity: 0.75;
+  padding: 15px;
+  border-radius:20px;
 }
