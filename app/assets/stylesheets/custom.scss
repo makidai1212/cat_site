@@ -129,7 +129,7 @@ p {
   @media (max-width: 767px) {
   .jumbotron {
     position: relative;
-    height: 130vmin;
+    height: 140vmin;
     width: 100%;
     background: image-url("4629742_m.jpg") center;
     background-size: cover;
@@ -690,4 +690,5 @@ span.image {
 
 .home-button2 {
   text-align: center;
+  padding-top: 20px;
 }
