@@ -39,10 +39,64 @@
           <div class="home-button">
             <%= link_to "新規登録", signup_path , class: "btn2 btn-warning btn-primary p-2", style: "width:18%" %>
             <%= link_to "ログイン", login_path, class: "btn2 btn-success btn-primary p-2", style: "width:18%" %>
+            <%= link_to "Neko Nekoとは", href="#scroll", class: "btn3 btn-primary p-2", style: "width:18%" %>
           </div>
     </div>
   </div>
-    <div class="about">
-      <%= render 'shared/about' %>
+    <div class="jumbotron_5">
+      <div class="bg-mask">
+          <section id="scroll">
+            <div class="container px-4">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-1 gazou">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/01.jpg" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5">
+                            <h2 class="display-4">Neko Nekoとは・・・</h2>
+                            <p>ねこ画像投稿用のSNSサイトです!!・・・といっても犬の画像も投稿できます!!<br>文章だけでも投稿できます!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+        <!-- Content section 2-->
+        <section>
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                  <div class="otameshi">
+                    <div class="col-lg-6 order-lg-2 gazou">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/02.jpg" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="display-4">Neko Nekoでできること</h2>
+                            <p>画像の投稿はもちろんできますが<br>他のユーザーの投稿に「いいね」<br>投稿へのコメントなんかもできます!!<br>フォロー機能もついてるから試してみてね!!<br>たくさんのユーザーのお気に入りを集めた投稿はなんと、5位までがランキングで表示されるのでどしどし投稿してください!!</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 3-->
+        <section>
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-1 gazou">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/03.jpg" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5">
+                            <h2 class="display-4">登録してさっそく投稿してみよう!!</h2>
+                            <p>登録はこちら!!</p>
+                            <div class="home-button2">
+                                <%= link_to "新規登録", signup_path , class: "btn2 btn-warning btn-primary p-2", style: "width:18%" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </div>
     </div>
 <% end %>

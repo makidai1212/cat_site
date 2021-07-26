@@ -123,6 +123,7 @@ p {
   background-size: cover;
   font-size: 1.3em;
   margin-top: 20px;
+  font-family: 'Yusei Magic', sans-serif;
   }
 
 .jumbotron_2 {
@@ -132,6 +133,7 @@ p {
   background-size: cover;
   font-size: 1.3vmax;
   margin-top: 20px;
+  font-family: 'Yusei Magic', sans-serif;
   }
 
 .jumbotron_3 {
@@ -141,6 +143,7 @@ p {
   background-size: cover;
   font-size: 2vmax;
   margin-top: 20px;
+  font-family: 'Yusei Magic', sans-serif;
   }
 
 .jumbotron_4 {
@@ -150,7 +153,15 @@ p {
   background-repeat: repeat;
   font-size: 1.4rem;
   margin-top: 20px;
+  font-family: 'Yusei Magic', sans-serif;
   }
+
+  .jumbotron_5 {
+    position: relative;
+    background: image-url("nekohaikei.jpg");
+    background-size: cover;
+    font-family: 'Yusei Magic', sans-serif;
+    }
 
   .bg-mask {
     height: 100%;
@@ -409,6 +420,10 @@ span.image {
   margin-top: 30px;
 }
 
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
 .mini-user-icon {
   border-radius: 100px;
   width: 60px;
@@ -454,7 +469,7 @@ span.image {
 
 /* before login */
 .home-button {
-  margin-top: 125px;
+  margin-top: 85px;
   text-align: right;
 }
 
@@ -535,20 +550,110 @@ span.image {
 }
 
 .btn {
+  margin-top: 10px;
   font-family: 'Yusei Magic', sans-serif;
 }
 
 .btn2 {
   padding: 3%;
   font-weight: 700;
-  font-size: 2vmax;
+  font-size: 1.8vmax;
   letter-spacing: 1px;
   text-transform: uppercase;
+  border-radius:20px;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+.btn3 {
+  color: tomato;
+  padding: 3%;
+  font-weight: 700;
+  font-size: 1.8vmax;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius:20px;
   font-family: 'Yusei Magic', sans-serif;
 }
 
 .navbar {
-  opacity: 0.75;
+  opacity: 0.85;
   padding: 15px;
   border-radius:20px;
 }
+
+/* スクロールの動きのところ */
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 画像のところ */
+.img-fluid {
+  max-width: 75%;
+  height: auto;
+}
+
+.rounded-circle {
+  border-radius: 100% !important;
+}
+
+/* 説明のところ */
+
+.px-4 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+  margin-top: 85px;
+}
+
+.px-5 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+  margin-top: 25px;
+}
+
+.g-5,
+.gx-5 {
+  --bs-gutter-x: 3rem;
+}
+
+.display-4 {
+  font-size: calc(1.475rem + 2vw);
+  font-weight: 300;
+  line-height: 1.2;
+  font-family: 'Yusei Magic', sans-serif;
+  text-align: center;
+  color: #ef3f98;
+}
+@media (min-width: 1200px) {
+  .display-4 {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 4.5rem;
+    text-align: center;
+  }
+}
+
+.gazou {
+  text-align: center;
+}
+
+.otameshi {
+  display: flex;
+  flex-direction: row-reverse;
+  @media screen and (max-width:1200px){
+    flex-direction: column;
+  }
+}
+
+.order-lg-1 {
+  order: 2;
+}
+
+.order-lg-2 {
+  order: 1;
+}
+
+.home-button2 {
+  text-align: center;
+}
+
