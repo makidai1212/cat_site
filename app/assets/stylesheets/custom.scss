@@ -117,7 +117,7 @@ p {
 /* home */
 .jumbotron {
   position: relative;
-  height: 100vmin;
+  height: 95vmin;
   width: 100%;
   background: image-url("4629742_m.jpg") center;
   background-size: cover;
@@ -125,6 +125,20 @@ p {
   margin-top: 20px;
   font-family: 'Yusei Magic', sans-serif;
   }
+
+  @media (max-width: 767px) {
+  .jumbotron {
+    position: relative;
+    height: 130vmin;
+    width: 100%;
+    background: image-url("4629742_m.jpg") center;
+    background-size: cover;
+    font-size: 1.3em;
+    margin-top: 20px;
+    font-family: 'Yusei Magic', sans-serif;
+    position: relative;
+    }
+}
 
 .jumbotron_2 {
   position: relative;
@@ -471,6 +485,20 @@ span.image {
 .home-button {
   margin-top: 85px;
   text-align: right;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  left: 0;
+}
+@media (max-width: 767px) {
+  .home-button {
+    margin-top: 85px;
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+  }
 }
 
 /* page_top */
@@ -546,7 +574,7 @@ span.image {
 }
 
 .p-2 {
-  padding: 2% !important;
+  padding: 2.5% !important;
 }
 
 .btn {
@@ -610,6 +638,13 @@ span.image {
   padding-right: 3rem !important;
   padding-left: 3rem !important;
   margin-top: 25px;
+}
+
+.px-6 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .g-5,
