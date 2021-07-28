@@ -24,7 +24,7 @@
           <% end %>
         <% end %>
             <% if @comments.any? %>
-              <h3>コメント一覧 (<%= @comments.count %>)</h3>
+              <h1>コメント一覧 (<%= @comments.count %>)</h1>
               <ol class="microposts">
                 <% @comments.each do |comment| %>
                   <li id="comments-<%= comment.id %>">
