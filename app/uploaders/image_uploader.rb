@@ -4,12 +4,14 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
   # storage :file
   # S3に保存するやつ
-  if Rails.env.production?
-    storage :fog # 本番環境のみ
-  else
-    storage :file # 本番環境以外
-  end
+  # if Rails.env.production?
+  # storage :fog # 本番環境のみ
+  # else
+  # storage :file # 本番環境以外
+  # end
 
+  # AWS解約のためこうするしかなかった…
+  storage :file
 
   # 画像の上限を640x480にする
   process :resize_to_limit => [640, 480]
